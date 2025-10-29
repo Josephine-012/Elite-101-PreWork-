@@ -1,20 +1,24 @@
 def greet_user(name):
     print(f"Hello, {name}!")
-def ask_age(age):
-    print(f"You're, {age}!")
-def ask_help(help):
-    print(f"I can help you with, {help}!")
-def choose_option(option):
-    print(f"I can help you contiue this conversation by, {option}!")
+def ask_email(email):
+    print(f"Your email is, {email}!")
+def ask_plan(plan):
+    print(f"I can help you with, {plan}!")
 
-print("Welcome to the Elite 101 Chatbot")
+print("Welcome to the Edikted Help Chat")
 name=input("Please enter your name: ")
-age=input("Please enter your age: ")
-ask=input("What can I help you with: ")
-choose=input("Choose from this option menu: Placeholder1, Placeholder 2, Placeholder 3: ")
-
-
 greet_user(name)
-ask_age(age)
-ask_help(ask)
-choose_option(choose)
+
+email=input("Please enter what email your account is under: ")
+ask_email(email)
+
+plan=input("Are you planning on returning or exchanging an item today?: ")
+ask_plan(plan)
+
+ask=input("Has been less than 30 days since your purchase?: ")
+if ask=='yes':
+    tell=input("Okay please continue!")
+    ask=input("What is the item's name?: ")
+    choose=input("Check your email for the return label and check in at your local store or mail the package back! ")
+if ask=='no':
+    tell=input("Sorry, you are unable to return or exchange this item")
